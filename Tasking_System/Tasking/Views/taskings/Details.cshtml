@@ -1,0 +1,74 @@
+﻿@model Tasking.Models.tasking
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tasking</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CoreUsers.UserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CoreUsers.UserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TaskName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TaskName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TaskNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TaskNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TaskDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TaskDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TaskComments)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TaskComments)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.completed)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.completed)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Idd }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
