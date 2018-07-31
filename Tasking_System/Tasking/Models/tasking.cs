@@ -12,7 +12,7 @@ namespace Tasking.Models
         [Key]
         public int Idd { get; set; }
 
-        [Display(Name = "User Name")]
+        [Display(Name = "Aurthor")]
         public string UserId { get; set; }
         [Display(Name = "Task Name")]
         public string TaskName { get; set; }

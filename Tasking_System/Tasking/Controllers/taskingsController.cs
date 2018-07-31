@@ -64,7 +64,6 @@ namespace Tasking.Controllers
                 tasking.TaskNumber = temp + guid;
                 tasking.TaskComments = "";
                 tasking.completed = false;
-
                 db.taskings.Add(tasking);
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -146,7 +145,7 @@ namespace Tasking.Controllers
         {
             ApplicationDbContext db = new ApplicationDbContext();
             string use = User.Identity.Name;
-            List<tasking> tasks = db.taskings.Where(x => x.UserId.Equals(use) && x.completed == false).ToList();
+            List<tasking> tasks = db.taskings.Where(x => x.CoreUsers.UserName.Equals(use)).ToList();
 
 
             //ViewBag.Case = cases;
