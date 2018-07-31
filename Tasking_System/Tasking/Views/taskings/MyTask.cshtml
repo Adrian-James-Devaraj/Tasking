@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Tasking.Models.tasking>
+
+@{
+    ViewBag.Title = "MyTask";
+}
+
+<h2>MyTask</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CoreUsers.UserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TaskName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TaskNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TaskDesc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TaskComments)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.completed)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CoreUsers.UserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TaskName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TaskNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TaskDesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TaskComments)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.completed)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Idd }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Idd }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Idd })
+        </td>
+    </tr>
+}
+
+</table>
