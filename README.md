@@ -1,4 +1,4 @@
-# Registe /Login
+# Register /Login
 A custom MVC Login was created.
 
 This will now store more information about the user.
