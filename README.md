@@ -9,6 +9,7 @@ The Administrator can create a task for any user on the system.
 The User can only view task assigned to them.
 
 The user will be able to comment on a task.
+
 The user can capture time on their task(This is an integer).
 
 Once the user as completed their task, they can mark the task as completed.
